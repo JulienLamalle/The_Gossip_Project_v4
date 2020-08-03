@@ -9,8 +9,8 @@
     <div class="card">
       <div class="card-body">
         <h5 class="mt-0 text-center"><%= gossip.title  %></h5>
-        <p class="card-text text-center"> Un gossip de : <%= link_to gossip.user.first_name , dynamic_pages_user_path(:id => gossip.user.id)%></p>
-        <%= link_to "Afficher ce gossip", dynamic_pages_gossip_path(:id => gossip.id), class: 'btn btn-outline-danger btn-sm' %>
+        <p class="card-text text-center"> Un gossip de : <%= link_to gossip.user.first_name , user_path(:id => gossip.user.id)%></p>
+        <%= link_to "Afficher ce gossip", show_path(:id => gossip.id), class: 'btn btn-outline-danger btn-sm' %>
       </div>
     </div>
   <% end %>

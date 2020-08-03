@@ -23,7 +23,7 @@
           <div class="card-body">
             <h5 class="mt-0 text-center"><%= gossip.title  %></h5>
             <p class="card-text text-center"> <%= gossip.content %></p>
-            <%= link_to "Afficher ce gossip seul", dynamic_pages_gossip_path(:id => gossip.id), class: 'btn btn-outline-danger btn-sm' %>
+            <%= link_to "Afficher ce gossip seul", show_path(:id => gossip.id), class: 'btn btn-outline-danger btn-sm' %>
           </div>
         </div>
     <% end %>
