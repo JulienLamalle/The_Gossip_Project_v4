@@ -5,10 +5,6 @@ class DynamicPagesController < ApplicationController
     params[:gossips] = Gossip.where(user_id: params[:user].id)
   end
 
-  def show
-    params[:gossip] = Gossip.find(params[:id])
-  end
-
   def user
     params[:user] = User.find(params[:id])
     params[:city] = City.find(params[:user].city_id)

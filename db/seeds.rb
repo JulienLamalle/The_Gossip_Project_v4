@@ -13,6 +13,8 @@ User.reset_pk_sequence
 PrivateMessage.destroy_all
 PrivateMessage.reset_pk_sequence
 
+Faker::Config.locale = 'fr'
+
 cities = Array.new
 gossips = Array.new
 tags = Array.new
@@ -26,7 +28,7 @@ private_messages = Array.new
   puts "Seeding City #{city.name} #{city.zip_code}"
 end
 
-10.times do 
+11.times do 
   user = User.create(
   first_name: Faker::Name.first_name,
   last_name: Faker::Name.last_name,

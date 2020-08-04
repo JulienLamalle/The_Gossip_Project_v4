@@ -1,0 +1,10 @@
+<div class ='align-middle text-center'>
+  <div class="card mt-5 ml-5 mr-5" style="height:200px">
+    <div class="card-body">
+      <h5 class="card-title"><%= @gossip.title %></h5>
+      <p class="card-title"><%= @gossip.created_at.strftime("%d/%m/%Y") %></p>
+      <p class="card-title">Le créateur de ce gossip est : <%= link_to @gossip.user.first_name , user_path(:id => @gossip.user.id)%></p>
+      <p class="card-text"><%= @gossip.content %></p>
+    </div>
+  </div>
+</div>
